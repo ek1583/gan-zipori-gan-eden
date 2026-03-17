@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>גן ציפורי גן עדן</title>
+    <meta name="description" content="אפליקציית גן ילדים אינטראקטיבית - גן ציפורי גן עדן">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;900&family=Fredoka:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/activities.css">
+    <link rel="stylesheet" href="css/viewer.css">
+    <link rel="stylesheet" href="css/editor.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="main-header">
+        <div class="header-content">
+            <div class="header-decoration left-deco">🌈</div>
+            <h1 id="header-title">
+                <span class="title-bird">🐦</span>
+                גן ציפורי גן עדן
+                <span class="title-bird flip">🐦</span>
+            </h1>
+            <div class="header-decoration right-deco">🌈</div>
+        </div>
+        <div class="header-stars">
+            <span>⭐</span><span>✨</span><span>⭐</span><span>✨</span><span>⭐</span>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav id="nav-bar" class="hidden">
+        <button id="btn-back" class="nav-btn nav-btn-back" data-tts="חזרה">
+            <span class="nav-icon">▶️</span>
+            <span class="nav-label">חזרה</span>
+        </button>
+        <button id="btn-home" class="nav-btn nav-btn-home" data-tts="דף הבית">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-label">בית</span>
+        </button>
+    </nav>
+
+    <!-- Floating Sound Button (always visible) -->
+    <button id="btn-sound" class="sound-fab sound-on" data-tts="">
+        <span class="sound-icon">🔊</span>
+    </button>
+
+    <!-- Breadcrumb -->
+    <div id="breadcrumb" class="hidden">
+        <div class="breadcrumb-inner"></div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main id="app">
+        <!-- Content rendered dynamically -->
+    </main>
+
+    <!-- Editor Access Button -->
+    <button id="btn-editor" class="editor-fab" title="פאנל עריכה" data-tts="פאנל עריכה">
+        ⚙️
+    </button>
+
+    <!-- Editor Modal -->
+    <div id="editor-overlay" class="overlay hidden">
+        <div id="editor-panel">
+            <!-- Editor content rendered dynamically -->
+        </div>
+    </div>
+
+    <!-- Password Modal -->
+    <div id="password-overlay" class="overlay hidden">
+        <div class="password-modal">
+            <h2>🔒 כניסת צוות</h2>
+            <p>הקלידו סיסמה</p>
+            <input type="password" id="password-input" maxlength="10" autocomplete="off">
+            <div class="modal-buttons">
+                <button id="btn-password-ok" class="btn-primary">אישור</button>
+                <button id="btn-password-cancel" class="btn-secondary">ביטול</button>
+            </div>
+            <p id="password-error" class="error-text hidden">סיסמה שגויה</p>
+        </div>
+    </div>
+
+    <!-- Seasonal Animations Container -->
+    <div id="seasonal-effects"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/tts.js"></script>
+    <script src="js/coloring.js"></script>
+    <script src="js/puzzle.js"></script>
+    <script src="js/tracing.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/editor.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
